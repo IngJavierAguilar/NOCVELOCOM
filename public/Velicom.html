@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velicon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="return Login()">
+      <h1>Velicon</h1>
+      <div class="input-box">
+        <input name="usuario" type="text" class="Input" placeholder="Usuario" size="20" required /> 
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input name="password" type="password" class="Input" placeholder="Contraseña" size="20" required /> 
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="btn">Entrar</button>
+      <div class="register-link">
+        <label for="">CREADA POR</label>
+        <br>
+        <label for="">ING. FRANCISCO JAVIER AMEZQUITA AGUILAR</label>
+        <br>
+        <label for="">JOSE ANTONIO ESPARZA ROBLEDO</label>
+      </div>
+    </form>
+  </div>
+
+  <script language="JavaScript"> 
+    
+    
+
+    function Login(){ 
+      var usuario = document.forms[0].usuario.value; 
+      var password = document.forms[0].password.value; 
+  
+      // Objeto con usuarios y contraseñas válidas
+      var usuariosValidos = {
+        "Paco": "Paco!2024",
+        "Javier Perez": "Perez@2024",
+        "Brenda": "Brenda@2024",
+        "Jose": "Antonio!2024",
+        "Fernando": "Fernando@91",
+        "Maria": "MJesús@2024",
+        "Gabriel": "Gabriel#2024",
+        "Javier Aguilar": "Javier!Aguilar",
+        "Efraín": "Efraín$2024"
+      };
+  
+      // Verificar si el usuario y la contraseña son correctos
+      if (usuariosValidos[usuario] === password) { 
+        window.location.href = "index.html"; 
+      } else {
+        alert("Usuario o contraseña incorrectos.");
+      }
+  
+      return false; // Evitar que el formulario se envíe y recargue la página
+    } 
+  </script> 
+</body>
+</html>
